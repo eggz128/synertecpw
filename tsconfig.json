@@ -1,0 +1,5 @@
+{ //Add standard node types so VSCode stops complaining about Buffer, and process
+  "compilerOptions": {
+    "types": ["node"]
+  }
+} 

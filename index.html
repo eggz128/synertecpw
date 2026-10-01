@@ -1,0 +1,31 @@
+<!doctype html>
+
+
+<title>My First Web Page</title>		
+<style>
+body {font-family: "Georgia", serif;}
+p {color: red;}
+div > p {color: green;}
+div span { border: 1px dotted black}
+p:nth-of-type(2) {background-color: yellow}
+p#handle1 {border: 3px solid red}
+.handle2 {text-transform: uppercase}
+</style>
+
+<h1 id="handle1" class="handle2">Hello World!</h1>
+<p contenteditable=true>This is a paragraph</p>
+
+<br />
+<p id="handle1">This is also a para this too
+<input value="Something" disabled>
+<textarea>blah</textarea>
+
+<a href="https://www.google.com">Click here</a>
+
+<div style="position: absolute; top: 0; width: 100px">
+ <section>
+ <p data-testid="unique">Another <span>para</span></p>
+ <p class="handle2">Another para</p>
+ <p>Another para</p>
+ </section>
+</div>

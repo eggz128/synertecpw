@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "iPad",
+    "price": 500
+  },
+  {
+    "id": 2,
+    "name": "iPhone X",
+    "price": 900
+  },
+  {
+    "id": 3,
+    "name": "Google Tablet",
+    "price": 400
+  },
+  {
+    "id": 4,
+    "name": "xbox",
+    "price": 300
+  }
+]

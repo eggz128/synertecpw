@@ -1,0 +1,6 @@
+Global beforeAll
+Starting test worker 8
+Global beforeEach
+Navigated to Google
+Global afterEach
+Last URL: https://www.google.com/

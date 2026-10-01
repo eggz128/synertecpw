@@ -1,0 +1,281 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test-2.spec.ts >> ecommerce @smoke
+- Location: tests\test-2.spec.ts:4:5
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('#doesnotexist')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f10e1]:
+  - complementary "Store notice" [ref=f10e2]:
+    - text:  This is a demo store for testing purposes — no orders shall be fulfilled.
+    - button " Dismiss" [ref=f10e3] [cursor=pointer]
+  - generic [ref=f10e4]:
+    - banner [ref=f10e5]:
+      - generic [ref=f10e6]:
+        - link "Skip to navigation" [ref=f10e7] [cursor=pointer]:
+          - /url: "#site-navigation"
+        - link "Skip to content" [ref=f10e8] [cursor=pointer]:
+          - /url: "#content"
+        - generic [ref=f10e9]:
+          - link "Edgewords Shop" [ref=f10e11] [cursor=pointer]:
+            - /url: https://www.edgewordstraining.co.uk/demo-site/
+          - paragraph [ref=f10e12]: e-commerce demo site for Training
+        - search [ref=f10e15]:
+          - text: 
+          - generic [ref=f10e16]: "Search for:"
+          - searchbox "Search for:" [active] [ref=f10e17]
+          - button "Search" [ref=f10e18] [cursor=pointer]
+      - generic [ref=f10e20]:
+        - navigation "Primary Navigation" [ref=f10e21]:
+          - list [ref=f10e23]:
+            - listitem [ref=f10e24]:
+              - link "Home" [ref=f10e25] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site
+            - listitem [ref=f10e26]:
+              - link "Shop" [ref=f10e27] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/shop/
+            - listitem [ref=f10e28]:
+              - link "Cart" [ref=f10e29] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/cart/
+            - listitem [ref=f10e30]:
+              - link "Checkout" [ref=f10e31] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/checkout/
+            - listitem [ref=f10e32]:
+              - link "My account" [ref=f10e33] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/my-account/
+            - listitem [ref=f10e34]:
+              - link "Blog" [ref=f10e35] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/blog/
+          - generic:
+            - list:
+              - listitem [ref=f10e36]:
+                - link "Home" [ref=f10e37] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/
+              - listitem [ref=f10e38]:
+                - link "Blog" [ref=f10e39] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/blog/
+              - listitem [ref=f10e40]:
+                - link "Cart" [ref=f10e41] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/cart/
+              - listitem [ref=f10e42]:
+                - link "Checkout" [ref=f10e43] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/checkout/
+              - listitem [ref=f10e44]:
+                - link "My account" [ref=f10e45] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/my-account/
+              - listitem [ref=f10e46]:
+                - link "Sample Page" [ref=f10e47] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/sample-page/
+              - listitem [ref=f10e48]:
+                - link "Shop" [ref=f10e49] [cursor=pointer]:
+                  - /url: https://www.edgewordstraining.co.uk/demo-site/shop/
+        - list [ref=f10e50]:
+          - listitem [ref=f10e51]:
+            - link "£0.00 0 items " [ref=f10e52] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/cart/
+              - generic [ref=f10e53]: £0.00
+              - text: 0 items 
+          - listitem
+    - navigation "breadcrumbs" [ref=f10e56]:
+      - link " Home" [ref=f10e57] [cursor=pointer]:
+        - /url: https://www.edgewordstraining.co.uk/demo-site
+      - generic [ref=f10e58]: / 
+      - text: Shop
+    - generic [ref=f10e60]:
+      - main [ref=f10e62]:
+        - heading "Shop" [level=1] [ref=f10e64]
+        - generic [ref=f10e65]:
+          - combobox "Shop order" [ref=f10e67]:
+            - option "Default sorting" [selected]
+            - option "Sort by popularity"
+            - option "Sort by average rating"
+            - option "Sort by latest"
+            - 'option "Sort by price: low to high"'
+            - 'option "Sort by price: high to low"'
+          - status [ref=f10e68]: Showing all 12 results
+        - list [ref=f10e69]:
+          - listitem [ref=f10e70]:
+            - 'link "Beanie Beanie Sale! Original price was: £20.00. Current price is: £18.00." [ref=f10e71] [cursor=pointer]':
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/beanie/
+              - img "Beanie" [ref=f10e72]
+              - heading "Beanie" [level=2] [ref=f10e73]
+              - generic [ref=f10e74]: Sale!
+              - generic [ref=f10e75]:
+                - deletion [aria-hidden] [ref=f10e76]:
+                  - generic [ref=f10e77]: £20.00
+                - generic [ref=f10e79]: "Original price was: £20.00."
+                - insertion [aria-hidden] [ref=f10e80]:
+                  - generic [ref=f10e81]: £18.00
+                - generic [ref=f10e83]: "Current price is: £18.00."
+            - 'button "Add to cart: “Beanie”" [ref=f10e84] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e86]:
+            - 'link "Belt Belt Sale! Original price was: £65.00. Current price is: £55.00." [ref=f10e87] [cursor=pointer]':
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/belt/
+              - img "Belt" [ref=f10e88]
+              - heading "Belt" [level=2] [ref=f10e89]
+              - generic [ref=f10e90]: Sale!
+              - generic [ref=f10e91]:
+                - deletion [aria-hidden] [ref=f10e92]:
+                  - generic [ref=f10e93]: £65.00
+                - generic [ref=f10e95]: "Original price was: £65.00."
+                - insertion [aria-hidden] [ref=f10e96]:
+                  - generic [ref=f10e97]: £55.00
+                - generic [ref=f10e99]: "Current price is: £55.00."
+            - 'button "Add to cart: “Belt”" [ref=f10e100] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e102]:
+            - 'link "Cap Cap Sale! Original price was: £18.00. Current price is: £16.00." [ref=f10e103] [cursor=pointer]':
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/cap/
+              - img "Cap" [ref=f10e104]
+              - heading "Cap" [level=2] [ref=f10e105]
+              - generic [ref=f10e106]: Sale!
+              - generic [ref=f10e107]:
+                - deletion [aria-hidden] [ref=f10e108]:
+                  - generic [ref=f10e109]: £18.00
+                - generic [ref=f10e111]: "Original price was: £18.00."
+                - insertion [aria-hidden] [ref=f10e112]:
+                  - generic [ref=f10e113]: £16.00
+                - generic [ref=f10e115]: "Current price is: £16.00."
+            - 'button "Add to cart: “Cap”" [ref=f10e116] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e118]:
+            - 'link "Hoodie Hoodie Sale! Original price was: £45.00. Current price is: £42.00." [ref=f10e119] [cursor=pointer]':
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/hoodie/
+              - img "Hoodie" [ref=f10e120]
+              - heading "Hoodie" [level=2] [ref=f10e121]
+              - generic [ref=f10e122]: Sale!
+              - generic [ref=f10e123]:
+                - deletion [aria-hidden] [ref=f10e124]:
+                  - generic [ref=f10e125]: £45.00
+                - generic [ref=f10e127]: "Original price was: £45.00."
+                - insertion [aria-hidden] [ref=f10e128]:
+                  - generic [ref=f10e129]: £42.00
+                - generic [ref=f10e131]: "Current price is: £42.00."
+            - 'button "Add to cart: “Hoodie”" [ref=f10e132] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e134]:
+            - link "Hoodie with Logo Hoodie with Logo £45.00" [ref=f10e135] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/hoodie-with-logo/
+              - img "Hoodie with Logo" [ref=f10e136]
+              - heading "Hoodie with Logo" [level=2] [ref=f10e137]
+              - generic [ref=f10e138]: £45.00
+            - 'button "Add to cart: “Hoodie with Logo”" [ref=f10e141] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e143]:
+            - 'link "Hoodie with Pocket Hoodie with Pocket Sale! Original price was: £45.00. Current price is: £35.00." [ref=f10e144] [cursor=pointer]':
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/hoodie-with-pocket/
+              - img "Hoodie with Pocket" [ref=f10e145]
+              - heading "Hoodie with Pocket" [level=2] [ref=f10e146]
+              - generic [ref=f10e147]: Sale!
+              - generic [ref=f10e148]:
+                - deletion [aria-hidden] [ref=f10e149]:
+                  - generic [ref=f10e150]: £45.00
+                - generic [ref=f10e152]: "Original price was: £45.00."
+                - insertion [aria-hidden] [ref=f10e153]:
+                  - generic [ref=f10e154]: £35.00
+                - generic [ref=f10e156]: "Current price is: £35.00."
+            - 'button "Add to cart: “Hoodie with Pocket”" [ref=f10e157] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e159]:
+            - link "Hoodie with Zipper Hoodie with Zipper £45.00" [ref=f10e160] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/hoodie-with-zipper/
+              - img "Hoodie with Zipper" [ref=f10e161]
+              - heading "Hoodie with Zipper" [level=2] [ref=f10e162]
+              - generic [ref=f10e163]: £45.00
+            - 'button "Add to cart: “Hoodie with Zipper”" [ref=f10e166] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e168]:
+            - link "Long Sleeve Tee Long Sleeve Tee £25.00" [ref=f10e169] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/long-sleeve-tee/
+              - img "Long Sleeve Tee" [ref=f10e170]
+              - heading "Long Sleeve Tee" [level=2] [ref=f10e171]
+              - generic [ref=f10e172]: £25.00
+            - 'button "Add to cart: “Long Sleeve Tee”" [ref=f10e175] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e177]:
+            - link "Polo Polo £20.00" [ref=f10e178] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/polo/
+              - img "Polo" [ref=f10e179]
+              - heading "Polo" [level=2] [ref=f10e180]
+              - generic [ref=f10e181]: £20.00
+            - 'button "Add to cart: “Polo”" [ref=f10e184] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e186]:
+            - link "Sunglasses Sunglasses £90.00" [ref=f10e187] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/sunglasses/
+              - img "Sunglasses" [ref=f10e188]
+              - heading "Sunglasses" [level=2] [ref=f10e189]
+              - generic [ref=f10e190]: £90.00
+            - 'button "Add to cart: “Sunglasses”" [ref=f10e193] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e195]:
+            - link "Tshirt Tshirt £18.00" [ref=f10e196] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/tshirt/
+              - img "Tshirt" [ref=f10e197]
+              - heading "Tshirt" [level=2] [ref=f10e198]
+              - generic [ref=f10e199]: £18.00
+            - 'button "Add to cart: “Tshirt”" [ref=f10e202] [cursor=pointer]': Add to cart
+          - listitem [ref=f10e204]:
+            - link "Vneck Tshirt Vneck Tshirt £18.00" [ref=f10e205] [cursor=pointer]:
+              - /url: https://www.edgewordstraining.co.uk/demo-site/product/vneck-tee/
+              - img "Vneck Tshirt" [ref=f10e206]
+              - heading "Vneck Tshirt" [level=2] [ref=f10e207]
+              - generic [ref=f10e208]: £18.00
+            - 'button "Add to cart: “Vneck Tshirt”" [ref=f10e211] [cursor=pointer]': Add to cart
+        - generic [ref=f10e213]:
+          - combobox "Shop order" [ref=f10e215]:
+            - option "Default sorting" [selected]
+            - option "Sort by popularity"
+            - option "Sort by average rating"
+            - option "Sort by latest"
+            - 'option "Sort by price: low to high"'
+            - 'option "Sort by price: high to low"'
+          - status [ref=f10e216]: Showing all 12 results
+      - complementary [ref=f10e217]:
+        - search [ref=f10e219]:
+          - text: 
+          - generic [ref=f10e220]:
+            - generic [ref=f10e221]: "Search for:"
+            - searchbox "Search for:" [ref=f10e222]
+          - button "Search" [ref=f10e223] [cursor=pointer]
+        - generic [ref=f10e224]:
+          - generic [ref=f10e225]: Recent Posts
+          - list [ref=f10e226]:
+            - listitem [ref=f10e227]:
+              - text: 
+              - link "Hello world!" [ref=f10e228] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/2018/03/22/hello-world/
+        - generic [ref=f10e229]:
+          - generic [ref=f10e230]: Recent Comments
+          - list
+        - generic [ref=f10e231]:
+          - generic [ref=f10e232]: Archives
+          - list [ref=f10e233]:
+            - listitem [ref=f10e234]:
+              - text: 
+              - link "March 2018" [ref=f10e235] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/2018/03/
+        - generic [ref=f10e236]:
+          - generic [ref=f10e237]: Categories
+          - list [ref=f10e238]:
+            - listitem [ref=f10e239]:
+              - text: 
+              - link "Uncategorized" [ref=f10e240] [cursor=pointer]:
+                - /url: https://www.edgewordstraining.co.uk/demo-site/category/uncategorized/
+    - contentinfo [ref=f10e241]:
+      - generic [ref=f10e242]:
+        - generic [ref=f10e243]:
+          - text: © Edgewords Shop 2026
+          - link "Built with WooCommerce" [ref=f10e244] [cursor=pointer]:
+            - /url: https://woocommerce.com
+          - text: .
+        - text:    
+  - status [ref=f10e245]
+```

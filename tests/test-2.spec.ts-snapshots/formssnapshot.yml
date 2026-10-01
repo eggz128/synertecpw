@@ -1,0 +1,49 @@
+- heading "Forms" [level=1]
+- paragraph: This form has an id of theForm.
+- table:
+  - rowgroup:
+    - row "Text Input with id/name textInput *":
+      - cell "Text Input with id/name textInput *"
+      - cell:
+        - textbox
+    - row "Text Area with id/name textArea":
+      - cell "Text Area with id/nameXXX textArea"
+      - cell:
+        - textbox
+    - row "Checkbox with id/name checkbox":
+      - cell "Checkbox with id/name checkbox"
+      - cell:
+        - checkbox
+    - row "Select with id/name select Selection One":
+      - cell "Select with id/name select"
+      - cell "Selection One":
+        - combobox:
+          - option "Selection One" [selected]
+          - option "Selection Two"
+          - option "Selection Three"
+    - row "Radio buttons with id/name radio One Two Three":
+      - cell "Radio buttons with id/name radio"
+      - cell "One Two Three":
+        - radio [checked]
+        - text: ""
+        - radio
+        - text: ""
+        - radio
+        - text: ""
+    - row "Password input with id/name password":
+      - cell "Password input with id/name password"
+      - cell:
+        - textbox
+    - row "File selector with id/name file Choose File":
+      - cell "File selector with id/name file"
+      - cell "Choose File":
+        - button "Choose File"
+    - row "Submit Clear":
+      - cell
+      - cell "Submit Clear":
+        - link "Submit":
+          - /url: "#"
+        - link "Clear":
+          - /url: "#"
+    - row "* Mandatory field.":
+      - cell "* Mandatory field."

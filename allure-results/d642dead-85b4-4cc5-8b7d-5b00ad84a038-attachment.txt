@@ -1,0 +1,8 @@
+Runs once only before any tests
+Runs just before each individual test
+Vneck Tshirt
+Tshirt
+Polo
+Long Sleeve Tee
+Runs after each test finishes
+Runs once after all tests have finished
